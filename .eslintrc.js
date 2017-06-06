@@ -21,6 +21,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/forbid-prop-types': ['warn', { forbid: ['any'] }],
     'comma-dangle': 'off',
+    'arrow-parens': ['error', 'as-needed'],
   },
   globals: {
     document: 1,
