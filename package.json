@@ -1,13 +1,21 @@
 {
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-import-resolver-alias": "^1.0.3",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-prettier": "^2.1.1",
+    "eslint-plugin-react": "^7.0.1",
     "poi": "^8.1.3",
-    "react-hot-loader": "next",
-    "redux-logger": "^3.0.6"
+    "prettier": "^1.4.2",
+    "react-hot-loader": "next"
   },
   "dependencies": {
     "react": "next",
@@ -16,10 +24,12 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
+    "redux-logger": "^3.0.6",
     "styled-components": "^2.0.0",
     "superagent": "^3.5.2"
   },
   "scripts": {
+    "lint": "eslint src/**/*.js",
     "start": "poi dev src/index.js",
     "build": "poi build src/index.js"
   }

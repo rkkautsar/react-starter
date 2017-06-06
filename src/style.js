@@ -1,6 +1,7 @@
 import { injectGlobal } from 'styled-components';
-import theme from '@/common/theme';
+import theme from './common/theme';
 
+/* eslint-disable no-unused-expressions */
 injectGlobal`
   body {
     font-size: 16px;
@@ -8,3 +9,4 @@ injectGlobal`
     color: ${theme.black};
   }
 `;
+/* eslint-enable */

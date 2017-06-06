@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import theme from '@/common/theme';
+import theme from '../common/theme';
 
-const App = ({ routes, store }) => (
-  <Provider store={store}>
-    <ThemeProvider theme={theme}>
-      <Router>
-        {routes}
-      </Router>
-    </ThemeProvider>
-  </Provider>
-);
+function App({ routes, store }) {
+  return (
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Router>
+          {routes}
+        </Router>
+      </ThemeProvider>
+    </Provider>
+  );
+}
+
+App.propTypes = {
+  routes: PropTypes.object.isRequired,
+  store: PropTypes.object.isRequired,
+};
 
 export default App;

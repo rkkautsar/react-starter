@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import styled from 'styled-components';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import * as counterActions from '@/redux_modules/counter';
+import * as counterActions from '../redux_modules/counter';
 
 @connect(
   state => ({
@@ -12,6 +10,15 @@ import * as counterActions from '@/redux_modules/counter';
   counterActions
 )
 export default class Home extends Component {
+  static propTypes = {
+    counter: PropTypes.shape({
+      count: PropTypes.number,
+      isLoading: PropTypes.bool,
+    }).isRequired,
+    decrementCounter: PropTypes.func.isRequired,
+    delayedIncrementCounter: PropTypes.func.isRequired,
+  };
+
   render() {
     return (
       <div>

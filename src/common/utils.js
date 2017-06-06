@@ -1,7 +1,7 @@
 export function range(start, end, step = 1) {
-  var ret = [];
+  const ret = [];
 
-  for (var i = start; i < end; i += step) {
+  for (let i = start; i < end; i += step) {
     ret.push(i);
   }
 
@@ -9,19 +9,15 @@ export function range(start, end, step = 1) {
 }
 
 export function and(list) {
-  return list.reduce((prev, cur) => {
-    return prev && cur;
-  }, true);
+  return list.reduce((prev, cur) => prev && cur, true);
 }
 
 export function or(list) {
-  return list.reduce((prev, cur) => {
-    return prev || cur;
-  }, false);
+  return list.reduce((prev, cur) => prev || cur, false);
 }
 
 export function any(predicate, list) {
-  for (var i = 0, len = list.length; i < len; i += 1) {
+  for (let i = 0, len = list.length; i < len; i += 1) {
     if (predicate(list[i])) return true;
   }
   return false;
