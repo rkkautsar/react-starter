@@ -25,10 +25,10 @@ yarn build # build production to dist/
 1. React
 2. Babel (stage-0, async-await)
 3. Redux
-  - [Ducks: Redux Reducer Bundles](https://github.com/erikras/ducks-modular-redux)
-  - [Redux Thunk](https://github.com/gaearon/redux-thunk)
-  - [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
-  - [Redux Devtools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
+    - [Ducks: Redux Reducer Bundles](https://github.com/erikras/ducks-modular-redux)
+    - [Redux Thunk](https://github.com/gaearon/redux-thunk)
+    - [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
+    - [Redux Devtools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 4. [React Router](https://reacttraining.com/react-router/)
 5. [Styled Components](https://github.com/styled-components/styled-components)
 6. [Superagent](https://github.com/visionmedia/superagent)
