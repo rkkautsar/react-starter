@@ -1,11 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import configureStore from '../../redux/configureStore';
+import routes from '../../routes';
 import theme from '../../common/theme';
 
-function App({ routes, store }) {
+const store = configureStore();
+
+function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -16,10 +19,5 @@ function App({ routes, store }) {
     </Provider>
   );
 }
-
-App.propTypes = {
-  routes: PropTypes.object.isRequired,
-  store: PropTypes.object.isRequired,
-};
 
 export default App;
