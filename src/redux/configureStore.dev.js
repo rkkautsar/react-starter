@@ -11,7 +11,7 @@ export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
 
   if (module.hot) {
-    module.hot.accept('@/redux_modules', () =>
+    module.hot.accept('../redux_modules', () =>
       // eslint-disable-next-line global-require
       store.replaceReducer(require('../redux_modules').default)
     );
