@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { ConnectedRouter } from 'react-router-redux';
+import history from '../../common/routing';
 import configureStore from '../../redux/configureStore';
 import routes from '../../routes';
 import theme from '../../common/theme';
@@ -12,9 +13,9 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <Router>
+        <ConnectedRouter history={history}>
           {routes}
-        </Router>
+        </ConnectedRouter>
       </ThemeProvider>
     </Provider>
   );
