@@ -7,11 +7,17 @@ test('reducer', t => {
     counter: {
       count: 0,
     },
+    router: {
+      location: null,
+    },
   };
 
   const expected = {
     counter: {
       count: 1,
+    },
+    router: {
+      location: null,
     },
   };
 
