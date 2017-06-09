@@ -19,6 +19,7 @@ module.exports = {
       },
     ],
     'react/jsx-filename-extension': 'off',
+    'react/jsx-wrap-multilines': 'off',
     'react/forbid-prop-types': ['warn', { forbid: ['any'] }],
     'comma-dangle': 'off',
     'arrow-parens': ['error', 'as-needed'],
