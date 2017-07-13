@@ -1,3 +1,5 @@
+> **Use [react-starter-ssr](https://github.com/rkkautsar/react-starter-ssr) for server-side-rendering**
+
 ## Description
 
 An opinionated simple react boilerplate
