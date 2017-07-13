@@ -37,5 +37,4 @@ npm run build # build production to dist/
     - [React Router Redux](https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux)
 7. [Styled Components](https://github.com/styled-components/styled-components)
 8. [Superagent](https://github.com/visionmedia/superagent)
-9. [React Hot Loader](https://github.com/gaearon/react-hot-loader)
-10. Zero-configuration build ([poi](https://github.com/egoist/poi))
+9. Zero-configuration build ([poi](https://github.com/egoist/poi))
