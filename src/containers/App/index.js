@@ -1,23 +1,16 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { ConnectedRouter } from 'react-router-redux';
-import history from '../../common/routing';
-import configureStore from '../../redux/configureStore';
+import { Switch, Route } from 'react-router-dom';
 import routes from '../../routes';
 import theme from '../../common/theme';
 
-const store = configureStore();
-
 function App() {
   return (
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <ConnectedRouter history={history}>
-          {routes}
-        </ConnectedRouter>
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Switch>
+        {routes.map(route => <Route key={route.path} {...route} />)}
+      </Switch>
+    </ThemeProvider>
   );
 }
 

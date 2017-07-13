@@ -14,9 +14,9 @@ git clone https://github.com/rkkautsar/react-starter
 Install dependencies
 
 ```sh
-yarn install
-yarn start # run development server at :4000
-yarn build # build production to dist/
+npm install
+npm start # run development server at :4000
+npm run build # build production to dist/
 ```
 
 

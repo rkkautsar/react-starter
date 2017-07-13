@@ -1,27 +1,21 @@
 import 'babel-polyfill';
-import 'react-hot-loader/patch';
 
 import React from 'react';
 import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
+import configureStore from './redux/configureStore';
+import history from './common/routing';
 import App from './containers/App';
 import './style';
 
-const renderRoot = Component => {
-  render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('app')
-  );
-};
+const store = configureStore();
 
-renderRoot(App);
-
-if (module.hot) {
-  module.hot.accept('./containers/App/index.js', () => {
-    // eslint-disable-next-line global-require
-    const NextRootContainer = require('./containers/App');
-    renderRoot(NextRootContainer);
-  });
-}
+render(
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('app')
+);

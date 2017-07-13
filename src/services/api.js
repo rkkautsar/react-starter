@@ -1,5 +1,5 @@
 import request from 'superagent';
-import * as apiURL from '../common/api_url';
+import * as apiURL from '../common/apiUrl';
 
 export async function getProductDetail(id) {
   return request.get(apiURL.productList(id));

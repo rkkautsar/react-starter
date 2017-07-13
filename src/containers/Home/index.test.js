@@ -1,7 +1,7 @@
 import React from 'react';
 import test from 'ava';
 import { render } from 'enzyme';
-import { mockThunkStore } from '../../common/test-utils';
+import { mockThunkStore } from '../../common/testUtils';
 import Home from './index';
 
 const initialState = {
