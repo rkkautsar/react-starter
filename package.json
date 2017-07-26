@@ -53,7 +53,8 @@
   "ava": {
     "require": [
       "babel-register",
-      "babel-polyfill"
+      "babel-polyfill",
+      "./src/common/testSetup.js"
     ],
     "babel": "inherit"
   }
