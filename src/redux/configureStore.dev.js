@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import logger from 'redux-logger';
+import logger from 'redux-logger'; // eslint-disable-line
 import { routerMiddleware } from 'react-router-redux';
 import history from '../common/routing';
 import rootReducer from '../redux_modules';
@@ -13,10 +13,10 @@ export default function configureStore(initialState) {
   const store = createStore(rootReducer, initialState, enhancer);
 
   if (module.hot) {
-    module.hot.accept('../redux_modules', () =>
+    module.hot.accept('../redux_modules', () => {
       // eslint-disable-next-line global-require
-      store.replaceReducer(require('../redux_modules').default)
-    );
+      store.replaceReducer(require('../redux_modules').default);
+    });
   }
 
   return store;

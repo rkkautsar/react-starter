@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
+
 import * as counterActions from '../../redux_modules/counter';
+
+import ReactLogo from 'src/assets/react.svg';
 
 @connect(
   state => ({
@@ -23,6 +26,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        <Image src={ReactLogo} alt="React Logo" />
         <h1>Hello React! ({this.props.counter.count})</h1>
         <Button
           onClick={() => this.props.decrementCounter()}
@@ -40,6 +44,11 @@ export default class Home extends Component {
     );
   }
 }
+
+const Image = styled.img`
+  max-width: 100%;
+  width: 10rem;
+`;
 
 const Button = styled.button`
   padding: .5rem 1rem;
