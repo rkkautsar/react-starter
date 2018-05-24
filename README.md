@@ -21,10 +21,17 @@ npm start # run development server at :4000
 npm run build # build production to dist/
 ```
 
+Reset git
+
+```sh
+rm -rf .git
+git init
+```
+
 
 ## Tech
 
-1. React
+1. React 16
 2. Babel (stage-0, async-await)
 3. ESLint + Prettier
 4. Redux
@@ -39,4 +46,8 @@ npm run build # build production to dist/
     - [React Router Redux](https://github.com/reacttraining/react-router/tree/master/packages/react-router-redux)
 7. [Styled Components](https://github.com/styled-components/styled-components)
 8. [Superagent](https://github.com/visionmedia/superagent)
-9. Zero-configuration build ([poi](https://github.com/egoist/poi))
+9. Webpack 4 ([Webpack](https://webpack.js.org/))
+
+## To-do
+1. React Loadable & Code Splitting
+2. More refactoring
