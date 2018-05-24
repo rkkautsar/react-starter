@@ -1,7 +1,9 @@
-const INCREMENT = 'app/counter/INCREMENT';
-const DECREMENT = 'app/counter/DECREMENT';
-const LOADING = 'app/counter/LOADING';
-const DONE = 'app/counter/DONE';
+const ns = constant => `app/counter/${constant}`;
+
+const INCREMENT = ns`INCREMENT`;
+const DECREMENT = ns`DECREMENT`;
+const LOADING = ns`LOADING`;
+const DONE = ns`DONE`;
 
 const initialState = {
   isLoading: false,
