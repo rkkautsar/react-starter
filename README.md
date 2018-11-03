@@ -1,6 +1,8 @@
 > **Use [react-starter-ssr](https://github.com/rkkautsar/react-starter-ssr) for server-side-rendering**
 
 ## Description
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frkkautsar%2Freact-starter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frkkautsar%2Freact-starter?ref=badge_shield)
+
 
 An opinionated simple react boilerplate
 
@@ -51,3 +53,7 @@ git init
 ## To-do
 1. React Loadable & Code Splitting
 2. More refactoring
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frkkautsar%2Freact-starter.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frkkautsar%2Freact-starter?ref=badge_large)
